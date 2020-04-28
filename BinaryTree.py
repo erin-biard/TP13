@@ -14,8 +14,17 @@ class BinaryTree:
         else:
             return False
 
-    #def size(self,node):
-        
+    def size(self,node):
+        if node == None:
+            return 0
+        else:
+            self.size(node.getL())+ 1 + self.size(node.getR())
+
+    def printValues(self,node):
+        if node == None:
+            return " "
+        else:
+            self.printValues(node.getL())+ self.printValues(node.getR()) + " " + str(node.getV())
 
 Arbre = BinaryTree(Node(12,None,None))
 Arbre.getr().setL(Node(5,None,None))
@@ -27,3 +36,4 @@ Arbre.getr().setR(Node(17,None,None))
 Arbre.getr().getR.setR(Node(19,None,None))
 Arbre.getr().getR.getR(Node(18,None,None))
 Arbre.getr().getR.getR.setR(Node(21,None,None))
+

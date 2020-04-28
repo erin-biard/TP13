@@ -22,6 +22,9 @@ class Node:
         self.__l = left
         return self.__l
 
+    def __str__(self):
+        return "La valeur du noeud est: "+ str(self.__v)
+
 N1 = Node(12,5,17)
-N2 = Node
-#print(N.getV(),N.getR(),N.getL())
+print(N1)
+
