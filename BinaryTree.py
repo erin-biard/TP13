@@ -33,10 +33,11 @@ class BinaryTree:
             self.sumValues(node.getL()) + self.sumValues(node.getR()) + node.getV()
 
     def numberLeaves(self,node):
+        sum = 0
         if node == None:
             return 0
         elif node.getL() == None and node.getR() == None:
-            return 1
+            sum += 1
         else:
             self.numberLeaves(node.getL()) + self.numberLeaves(node.getR())
 
@@ -48,6 +49,11 @@ class BinaryTree:
         else:
             self.numberLeaves(node.getL()) + self.numberLeaves(node.getR()) + 1
 
+    def heigth(self,node):
+        if node == None :
+            return 0
+        else:
+            self.heigth(node.getL()) + self.heigth(node.getR())
 
 
 
